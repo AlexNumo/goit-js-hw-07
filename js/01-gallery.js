@@ -2,8 +2,6 @@ import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
 const galleryFind = document.querySelector(".gallery");
-const imageViewAll = createImagesAll(galleryItems);
-galleryFind.insertAdjacentHTML('beforeend', imageViewAll);
 
 function createImagesAll(images) {
   return images
@@ -25,6 +23,8 @@ function createImagesAll(images) {
     .join('');
 }
 
+const imageViewAll = createImagesAll(galleryItems);
+galleryFind.insertAdjacentHTML('beforeend', imageViewAll);
 
 
 galleryFind.addEventListener('click', modalOpen);
